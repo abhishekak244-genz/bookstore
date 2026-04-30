@@ -8,7 +8,7 @@ function AdminSidebar() {
       {/* image */}
       <div className='flex justify-center'>
         <img
-                  style={{
+              style={{
                     width: "100px",
                     height: "100px",
                     borderRadius: "50%",

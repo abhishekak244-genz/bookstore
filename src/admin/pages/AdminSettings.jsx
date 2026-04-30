@@ -1,6 +1,6 @@
 import React from 'react'
 import AdminHeader from '../components/AdminHeader'
-import AdminSideBar from '../components/AdminSideBar'
+import AdminSideBar from '../components/AdminSidebar'
 import Footer from '../../components/Footer'
 import { FaPen } from "react-icons/fa";
 
@@ -24,13 +24,14 @@ function AdminSettings() {
               <h4 className='text-lg my-5 font-medium'> 🔧 What You Can Manage in This Section:</h4>
               <ul>
 
-                <li className=''>✏️ Update personal details (name, email, role, profile picture)</li>
+                <li className='text-'>✏️ Update personal details (name, email, role, profile picture)</li>
                 <li>🔐 Change or reset your password</li>
                 <li>📢 Configure notification and alert preferences</li>
                 <li>👥 Manage permissions based on assigned access level</li>
                 <li>🧩 Customize dashboard visibility and layout</li>
                 <p> Your profile settings help ensure your administrative tools work the way you need them to — securely, efficiently, and with complete control. Thank you for keeping the platform organized and running smoothly. Continue managing, updating, and improving the system — one step at a time. 🚀📚</p>
               </ul>
+              
             </div>
                 {/* edit form  */}
              <div className="flex justify-center items-center flex-col m-10 bg-blue-100 p-5 rounded">

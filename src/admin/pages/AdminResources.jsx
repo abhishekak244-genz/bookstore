@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AdminHeader from '../components/AdminHeader'
-import AdminSideBar from '../components/AdminSideBar'
+import AdminSideBar from '../components/AdminSidebar'
 import Footer from '../../components/Footer'
 
 
