@@ -7,6 +7,7 @@ import Edit from "../components/Edit";
 import UploadBook from "../components/UploadBook";
 import BookStatus from "../components/BookStatus";
 import Purchase from "../Purchase";
+import axiosInstance from '../../api/axiosInstance';
 
 function Profile() {
   const [currentTab, setCurrentTab] = useState(1);
@@ -37,8 +38,8 @@ function Profile() {
       >
         <img
           style={{ width: "200px", height: "200px", borderRadius: "50%" }}
-          src={dp==""?"https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg":dp} 
-          alt=""
+          src={dp==""?"https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg":dp.startsWith("https://lh3.googleusercontent.com/")?dp:`${axiosInstance.defaults.baseURL}/uploads/${dp}`} 
+          alt="user"
         />
       </div>
       <div className="md:flex justify-between px-20 mt-5">

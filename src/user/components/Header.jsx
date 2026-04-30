@@ -3,6 +3,7 @@ import { FaBars, FaFacebook, FaFacebookSquare, FaInstagram, FaTwitter, FaUser } 
 import { FaPowerOff } from "react-icons/fa";
 import { FaGears } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
+import axiosInstance from '../../api/axiosInstance';
 
 function Header() {
   const [toggle,setToggle]= useState(false)
@@ -52,7 +53,7 @@ useEffect ( ()=>{
           <div>
             {/* profile icon */}
             <button onClick={()=>setDropdown(!dropdown)} className="shadow-sm rounded ms-5 p-1 hover:bg-gray-100">
-              <img width={'40px'} height={'40px'} style={{borderRadius:"50%"}} src={dp==""?"https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg":dp} alt="profile icon" />
+              <img width={'40px'} height={'40px'} style={{borderRadius:"50%"}} src={dp==""?"https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg":dp.startsWith("https://lh3.googleusercontent.com/")?dp:`${axiosInstance.defaults.baseURL}/uploads/${dp}`} alt="profile icon" />
             </button>
             
               {/* dropdown menu */}
@@ -83,7 +84,7 @@ useEffect ( ()=>{
           <div className="relative">
             {/* profile icon */}
             <button onClick={()=>setDropdown(!dropdown)} className="shadow-sm rounded ms-5 p-1 hover:bg-gray-100">
-              <img width={'40px'} height={'40px'} style={{borderRadius:"50%"}} src={dp==""?"https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg":dp} alt="profile icon" />
+              <img width={'40px'} height={'40px'} style={{borderRadius:"50%"}} src={dp==""?"https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg":dp.startsWith("https://lh3.googleusercontent.com/")?dp:`${axiosInstance.defaults.baseURL}/uploads/${dp}`} alt="profile icon" />
             </button>
             
               {/* dropdown menu */}
